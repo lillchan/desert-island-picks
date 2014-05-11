@@ -1,2 +1,14 @@
 <h1>Welcome to Desert Island Picks</h1>
-<p>Wooooooooo!</p>
+<%= form_for @user do |f| %>
+	<%= f.label :app_id %>
+	<%= f.select :app_id, @apps %>
+	<br>
+	<%= f.label :movie_id %>
+	<%= f.select :movie_id, @movies %>
+	<br>
+	<%= f.label :album_id %>
+	<%= f.select :album_id, @albums %>
+	<br>
+	<%= f.label :website_id %>
+	<%= f.select :website_id, @websites %>
+<% end %>

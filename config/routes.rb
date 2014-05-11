@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
+  get 'users/new'
+
+  get 'users/edit'
+
+  get 'websites/show'
+
+  get 'websites/create'
+
+  get 'albums/show'
+
+  get 'albums/create'
+
+  get 'movies/show'
+
+  get 'movies/create'
+
+  get 'apps/show'
+
+  get 'apps/create'
+
+  get 'app/show'
+
+  get 'app/create'
+
+  get 'welcome/index'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

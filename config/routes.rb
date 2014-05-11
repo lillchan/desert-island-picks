@@ -1,37 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/show'
-
-  get 'users/new'
-
-  get 'users/edit'
-
-  get 'websites/show'
-
-  get 'websites/create'
-
-  get 'albums/show'
-
-  get 'albums/create'
-
-  get 'movies/show'
-
-  get 'movies/create'
-
-  get 'apps/show'
-
-  get 'apps/create'
-
-  get 'app/show'
-
-  get 'app/create'
-
-  get 'welcome/index'
-
+  resources :apps
+  resources :movies
+  resources :albums
+  resources :websites
   devise_for :users
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
   root 'welcome#index'
 
   # Example of regular route:

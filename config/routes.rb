@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :profiles
   resources :apps
   resources :movies
   resources :albums
   resources :websites
-  devise_for :users
   root 'welcome#index'
 
   # Example of regular route:

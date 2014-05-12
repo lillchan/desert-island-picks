@@ -7,9 +7,10 @@ class ProfilesController < ApplicationController
   end
 
   def create
-  	@profile = current_user.profile.build profile_params
+  	@profile = Profile.new(profile_params)
 
     if @profile.save
+      current_user.profile = @profile
       redirect_to @profile
     else
       render :new
@@ -19,6 +20,6 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:app_id, :movie_id, :album_id, :website_id)
+    params.require(:profile).permit(:app_id, :movie_id, :album_id, :website_id, :user_id)
   end
 end

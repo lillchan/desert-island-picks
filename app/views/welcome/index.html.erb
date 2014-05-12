@@ -1,5 +1,5 @@
 <h1>Welcome to Desert Island Picks</h1>
-<%= form_for @user do |f| %>
+<%= form_for @profile do |f| %>
 	<%= f.label :app_id %>
 	<%= f.select :app_id, @apps %>
 	<br>
@@ -11,4 +11,7 @@
 	<br>
 	<%= f.label :website_id %>
 	<%= f.select :website_id, @websites %>
+	<br>
+	<%= f.hidden_field :user_id %>
+	<%= f.submit %>
 <% end %>

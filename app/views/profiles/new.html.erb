@@ -13,10 +13,10 @@
 	<%= f.select :app_id, @apps %>
 	<br>
 	<%= f.label :movie_id %>
-	<%= f.select :movie_id, @movies %>
+	<%= f.select '#{:movie_id} by #{:director}', @movies %>
 	<br>
 	<%= f.label :album_id %>
-	<%= f.select :album_id, @albums %>
+	<%= f.select '#{:album_id} by #{:artist}', @albums %>
 	<br>
 	<%= f.label :website_id %>
 	<%= f.select :website_id, @websites %>

@@ -28,9 +28,9 @@ Artist.create name: 'RAC'
 Artist.create name: 'Empire of the Sun'
 
 puts 'Adding seed albums'
-Album.create name: 'Wildewoman', artist_id: 1
-Album.create name: 'Chapter One', artist_id: 2
-Album.create name: 'Walking on a Dream', artist_id: 3
+Album.create title: 'Wildewoman', artist_id: 1
+Album.create title: 'Chapter One', artist_id: 2
+Album.create title: 'Walking on a Dream', artist_id: 3
 
 puts 'Adding seed websites'
 Website.create name: 'The New York Times'

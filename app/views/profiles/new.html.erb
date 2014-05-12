@@ -1,2 +1,26 @@
-<h1>Profiles#new</h1>
-<p>Find me in app/views/profiles/new.html.erb</p>
+<h1>Create New Profile</h1>
+<% if @profile.errors.any? %>
+  <h2>The following errors prevented your profile from saving:</h2>
+  <ul>
+  <% @profile.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_for @profile do |f| %>
+	<%= f.label :app_id %>
+	<%= f.select :app_id, @apps %>
+	<br>
+	<%= f.label :movie_id %>
+	<%= f.select :movie_id, @movies %>
+	<br>
+	<%= f.label :album_id %>
+	<%= f.select :album_id, @albums %>
+	<br>
+	<%= f.label :website_id %>
+	<%= f.select :website_id, @websites %>
+	<br>
+	<%= f.hidden_field :user_id %>
+	<%= f.submit %>
+<% end %>

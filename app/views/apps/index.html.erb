@@ -1,0 +1,7 @@
+<% if @apps.any? %>
+	<ul>
+	<% @apps.each do |app| %>
+		<li><%= link_to app.name, app %></li>
+	<% end %>
+	</ul>
+<% end %>

@@ -1,0 +1,7 @@
+<% if @websites.any? %>
+	<ul>
+	<% @websites.each do |website| %>
+		<li><%= link_to website.name, website %></li>
+	<% end %>
+	</ul>
+<% end %>

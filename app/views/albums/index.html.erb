@@ -1,0 +1,7 @@
+<% if @albums.any? %>
+	<ul>
+	<% @albums.each do |album| %>
+		<li><%= link_to album.title, album %></li>
+	<% end %>
+	</ul>
+<% end %>

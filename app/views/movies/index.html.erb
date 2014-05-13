@@ -1,0 +1,7 @@
+<% if @movies.any? %>
+	<ul>
+	<% @movies.each do |movie| %>
+		<li><%= link_to movie.name, movie %></li>
+	<% end %>
+	</ul>
+<% end %>

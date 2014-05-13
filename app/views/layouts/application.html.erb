@@ -7,14 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<h1>Desert Island Picks</h1>
+	<h1><%= link_to "Desert Island Picks", root_path %></h1>
+	<%= link_to "Home", root_path %> |
+	<%= link_to "Log out", destroy_user_session_path, :method => :delete %><br>
 	<%= link_to "All Movies", movies_path %> |
 	<%= link_to "All Apps", apps_path %> |
 	<%= link_to "All Albums", albums_path %> |
 	<%= link_to "All Websites", websites_path %>
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
-	<%= link_to "Log out", destroy_user_session_path, :method => :delete %>
 	<%= yield %>
 </body>
 </html>

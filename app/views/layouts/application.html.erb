@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DesertIslandPicks</title>
+  <title>Desert Island Picks</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<h1>Desert Island Picks</h1>
+	<%= link_to "All Movies", movies_path %> |
+	<%= link_to "All Apps", apps_path %> |
+	<%= link_to "All Albums", albums_path %> |
+	<%= link_to "All Websites", websites_path %>
 	<p class="notice"><%= notice %></p>
 	<p class="alert"><%= alert %></p>
 	<%= link_to "Log out", destroy_user_session_path, :method => :delete %>

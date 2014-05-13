@@ -7,7 +7,6 @@ class WelcomeController < ApplicationController
       redirect_to "/profiles/#{@user_id}"
     else
       @profile = Profile.new
-      @user_id = current_user.id
       @apps = App.all.collect { |app| [app.name, app.id] }
       @movies = Movie.all.collect { |movie| [movie.name, movie.id] }
       @albums = Album.all.collect { |album| [album.title, album.id] }

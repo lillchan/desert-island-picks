@@ -1,2 +1,7 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h2><%= @movie.name %> by <%= @movie.director.name %></h2>
+<p>All the folks who like this movie:</p>
+<ul>
+	<% @movie.users.each do |user| %>
+		<li><%= user.email %></li>
+	<% end %>
+</ul>

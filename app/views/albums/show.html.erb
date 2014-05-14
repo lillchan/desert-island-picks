@@ -1,2 +1,7 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<h2><%= @album.title %> by <%= @album.artist.name %></h2>
+<p>Everyone how likes this album:</p>
+<ul>
+<% @album.users.each do |user| %>
+	<li><%= user.email %></li>
+<% end %>
+</ul>

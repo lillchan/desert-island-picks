@@ -1,2 +1,7 @@
-<h1>Apps#show</h1>
-<p>Find me in app/views/apps/show.html.erb</p>
+<h2><%= @app.name %></h2>
+<p>All the folks who like this app:</p>
+<ul>
+<% @app.users.each do |user| %>
+	<li><%= user.email %></li>
+<% end %>
+</ul>

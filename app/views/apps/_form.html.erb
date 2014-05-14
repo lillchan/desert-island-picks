@@ -1,0 +1,17 @@
+<% if @album.errors.any? %>
+	<h2>Oh noes, there were errors saving your profile!</h2>
+	<ul>
+		<% @album.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @album do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<br>
+	<%= f.label :artist %>
+	<%= f.select :artist, @artist %>
+	<%= f.submit %>
+<% end %>

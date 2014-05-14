@@ -8,6 +8,11 @@ class AlbumsController < ApplicationController
   def show
   end
 
+  def new
+    @album = Album.new
+    @artists = Artist.all.collect { |artist| [artist.name, artist.id] }
+  end
+
   def create
   end
 

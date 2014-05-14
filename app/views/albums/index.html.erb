@@ -1,3 +1,5 @@
+<h2>All Albums</h2>
+<p><%= link_to "Add a New Album", new_album_path %></p>
 <% if @albums.any? %>
 	<ul>
 	<% @albums.each do |album| %>

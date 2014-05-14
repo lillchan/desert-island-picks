@@ -43,8 +43,8 @@ class ProfilesController < ApplicationController
 
   def load_associated
     @apps = App.all.collect { |app| [app.name, app.id] }
-    @movies = Movie.all.collect { |movie| [movie.name, movie.id] }
-    @albums = Album.all.collect { |album| [album.title, album.id] }
+    @movies = Movie.all.collect { |movie| ["#{movie.name} by #{movie.director.name}", movie.id] }
+    @albums = Album.all.collect { |album| ["#{album.title} by #{album.artist.name}", album.id] }
     @websites = Website.all.collect { |website| [website.name, website.id] }
   end
 end

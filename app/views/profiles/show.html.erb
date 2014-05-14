@@ -1,6 +1,6 @@
 <h2>Your Profile</h2>
-<p><b>Album:</b> <%= @profile.album.title %></p>
-<p><b>Movie:</b> <%= @profile.movie.name %></p>
+<p><b>Album:</b> <%= @profile.album.title %> by <%= @profile.album.artist.name %></p>
+<p><b>Movie:</b> <%= @profile.movie.name %> by <%= @profile.movie.director.name %></p>
 <p><b>App:</b> <%= @profile.app.name %></p>
 <p><b>Website:</b> <%= @profile.website.name %></p>
 <%= link_to "Edit Your Profile", edit_profile_path %>

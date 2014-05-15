@@ -1,5 +1,5 @@
 <h2><%= @album.title %> by <%= @album.artist.name %></h2>
-<p>Everyone how likes this album:</p>
+<p>Everyone who likes this album:</p>
 <ul>
 <% @album.users.each do |user| %>
 	<li><%= user.email %></li>

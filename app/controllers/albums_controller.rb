@@ -14,11 +14,21 @@ class AlbumsController < ApplicationController
   end
 
   def create
+    @album = Album.new(safe_album_params)
+    if @album.save
+      redirect_to @album
+    else
+      render 'new'
+    end
   end
 
   private
 
   def load_album
   	@album = Album.find(params[:id])
+  end
+
+  def safe_album_params
+    params.require('album').permit(:title, :artist_id)
   end
 end

@@ -1,0 +1,15 @@
+<% if @director.errors.any? %>
+	<h2>Oh noes, there were errors saving a new director!</h2>
+	<ul>
+		<% @director.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @director do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.submit %>
+<% end %>

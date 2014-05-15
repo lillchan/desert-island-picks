@@ -3,7 +3,7 @@
 <% if @movies.any? %>
 	<ul>
 	<% @movies.each do |movie| %>
-		<li><%= link_to "#{movie.name} by #{movie.director.name}", movie %></li>
+		<li><%= link_to "#{movie.name}", movie %> by <%= link_to "#{movie.director.name}", movie.director %></li>
 	<% end %>
 	</ul>
 <% end %>

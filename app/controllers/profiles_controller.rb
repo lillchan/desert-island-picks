@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
   before_action :load_associated, only: [:edit, :new]
 
   def show
+    @user = current_user
   end
 
   def new

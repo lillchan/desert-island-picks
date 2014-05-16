@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   devise_for :users
   resources :artists
   resources :directors
@@ -7,7 +8,6 @@ Rails.application.routes.draw do
   resources :movies
   resources :albums
   resources :websites
-  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

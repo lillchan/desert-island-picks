@@ -1,4 +1,4 @@
-<h2>Your Desert Island Picks</h2>
+<h2><%= @user.username %>'s Desert Island Picks</h2>
 <%= image_tag @user.avatar.url %><br>
 <p><b>Album:</b> <%= link_to @profile.album.title, @profile.album %> by <%= link_to @profile.album.artist.name, @profile.album.artist %></p>
 <p><b>Movie:</b> <%= link_to @profile.movie.name, @profile.movie %> by <%= link_to @profile.movie.director.name, @profile.movie.director %></p>

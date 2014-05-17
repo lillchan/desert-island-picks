@@ -1,0 +1,7 @@
+<h1><%= @artist.name %></h1>
+<p>Albums by this Artist:</p>
+<ul>
+<% @artist.albums.each do |album| %>
+	<li><%= link_to "#{album.title}", album %></li>
+<% end %>
+</ul>

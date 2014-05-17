@@ -40,4 +40,5 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'thin'
-
+gem 'carrierwave'
+gem 'mini_magick' # need to brew install imagemagick first

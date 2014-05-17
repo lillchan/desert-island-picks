@@ -1,0 +1,15 @@
+<% if @artist.errors.any? %>
+	<h2>Oh noes, there were errors saving a new artist!</h2>
+	<ul>
+		<% @artist.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @artist do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.submit %>
+<% end %>

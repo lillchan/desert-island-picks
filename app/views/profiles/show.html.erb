@@ -1,6 +1,8 @@
-<h2>Your Profile</h2>
-<p><b>Album:</b> <%= @profile.album.title %> by <%= @profile.album.artist.name %></p>
-<p><b>Movie:</b> <%= @profile.movie.name %> by <%= @profile.movie.director.name %></p>
-<p><b>App:</b> <%= @profile.app.name %></p>
-<p><b>Website:</b> <%= @profile.website.name %></p>
-<%= link_to "Edit Your Profile", edit_profile_path %>
+<h2><%= @user.username %>'s Desert Island Picks</h2>
+<%= image_tag @user.avatar.url %><br>
+<p><b>Album:</b> <%= link_to @profile.album.title, @profile.album %> by <%= link_to @profile.album.artist.name, @profile.album.artist %></p>
+<p><b>Movie:</b> <%= link_to @profile.movie.name, @profile.movie %> by <%= link_to @profile.movie.director.name, @profile.movie.director %></p>
+<p><b>App:</b> <%= link_to @profile.app.name, @profile.app %></p>
+<p><b>Website:</b> <%= link_to @profile.website.name, @profile.website %></p>
+<%= link_to "Edit Your Picks", edit_profile_path %>
+<%= link_to "Edit Your Profile", edit_user_registration_path %>

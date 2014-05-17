@@ -1,3 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desert Island Picks index</title>
+
+
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="css/desert_island.css" rel="stylesheet" type="text/css"> 
+    <link href='http://fonts.googleapis.com/css?family=Codystar:300,400' rel='stylesheet' type='text/css'>
+    
+    <style>
+    html { 
+      background-image: url(<%= asset_path 'picks_page_cropped.jpg' %>); 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      }
+
+      </style> 
+    
+  </head>
+
+    <body>
+
+
+<!--<h2 class="cool">Desert Island Picks</h2> -->
+  <div class="container-fluid">
+      <div class="row">
+
+
 <% if @profile.errors.any? %>
 	<h2>Oh noes, there were errors saving your profile!</h2>
 	<ul>
@@ -22,3 +57,8 @@
 	<br>
 	<%= f.submit %>
 <% end %>
+
+</div>
+</form>
+</div>
+</div>

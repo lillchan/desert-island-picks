@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Desert Island Picks index</title>
 
-<<<<<<< HEAD
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/desert_island.css" rel="stylesheet" type="text/css">
+
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="css/desert_island.css" rel="stylesheet" type="text/css"> 
     <link href='http://fonts.googleapis.com/css?family=Codystar:300,400' rel='stylesheet' type='text/css'>
     
     <style>
     html { 
-      background: url(images/desert_island_mid_home.jpg) no-repeat center center fixed; 
+      background-image: url(<%= asset_path 'desert_island_mid_home.jpg' %>); 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
       }
-    </style> 
+
+      </style> 
     
   </head>
 
@@ -36,20 +37,11 @@
 <!--<h2 class="cool">Desert Island Picks</h2> -->
   <div class="container-fluid">
       <div class="row">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-=======
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
->>>>>>> 2587ff2f14a42553935ab83280b7db9943a5f926
-  <%= devise_error_messages! %>
-<form class="form-inline" role="form">
-<div class="form-group">
-  <div><%= f.label :email. :html => {:class => "sr-only"} %><br />
-  <%= f.email_field :email, autofocus: true, :html => {:class => "form-control", :placeholder => "Enter Email"} %></div>
 
-<<<<<<< HEAD
-  <div><%= f.label :password, :html => {:class => "sr-only"} %><br />
-    <%= f.password_field :password, autocomplete: "off", :html => {:class => "form-control", :placeholder => "Password"} %></div>
-=======
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f| %>
+
+  <%= devise_error_messages! %>
+
   <div>
   	<%= f.label :avatar%><br>
   	<%= f.file_field :avatar %><br>
@@ -63,12 +55,12 @@
 
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
->>>>>>> 2587ff2f14a42553935ab83280b7db9943a5f926
+
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Sign up" :html => {:class => "btn btn-default" %></div>
+  <div><%= f.submit "Sign up" %></div>
 <% end %>
 </div>
 </form>

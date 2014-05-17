@@ -1,40 +1,13 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require desert_island.css
 
- */
- 
+ /*body {
+	background-image: url("desert_island_mid_home.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
 
-
- html { 
-      background: url(assets/desert_island_mid_home.jpg) no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      }
-
- body {
-
- 	background-color: none;
-
- }
-
- .avatar_image {
- 	width: 200px;
- }
+/* Welcome page */
 
 .cool {
 	font-family: 'Codystar', sans-serif;
@@ -54,17 +27,6 @@
 	padding: 0% 20% 40% 20%;
 	
 }
-
-
- /*body {
-	background-image: url("desert_island_mid_home.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-} */
-
-/* Welcome page */
 
 
 /* Picks page */
@@ -460,8 +422,6 @@
     /*border: 3px solid black;*/
     background-color: white;
 }
-
-
 
 
 
